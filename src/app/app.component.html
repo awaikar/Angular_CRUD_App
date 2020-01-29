@@ -1,0 +1,15 @@
+<div class="mainbody">
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <button class="btn btn-outline-info" [routerLink]="['/creatEmployee']">Create</button>
+        <button class="btn btn-outline-info" style="margin-left: 20px" [routerLink]="['/viewEmployee']">View</button>      
+      </div>
+      <div class="col-9">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
+
+

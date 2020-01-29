@@ -1,0 +1,10 @@
+.container .table {
+    background-color: #f0f0f0;
+    color: #666666;
+}
+.container .table th {
+    color: black;
+}
+.container .table .fas {
+    margin-right: 5px;
+}

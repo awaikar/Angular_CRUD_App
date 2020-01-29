@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+crossorigin="anonymous">
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="col-6">
+                <input
+                type="text"
+                class="form-control"
+                placeholder="Search..."
+                [(ngModel)]="searchString"
+            />
+            </div>
+            <br/>
+            <table class="table" id="myTable">
+                <tr>
+                    <th>Name</th>
+                    <th>Designation</th>
+                    <th>Salary</th>
+                    <th>Action</th>
+                </tr>
+                <tr *ngFor="let emp of empDetails | filter : searchString; let i = index">
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.designation}}</td>
+                    <td>{{emp.salary}}</td>
+                    <td>
+                        <button (click)="editEmployee(i)" class="btn btn-primary">
+                                <span class="fas fa-edit" aria-hidden="true"></span>Edit</button>
+                        <button (click)="deleteEmployee(i)" style="margin-left:20px" class="btn btn-danger">
+                                <span class="fas fa-trash" aria-hidden="true"></span>Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
